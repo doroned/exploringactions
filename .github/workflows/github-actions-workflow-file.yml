@@ -33,12 +33,12 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Setup dotnet on runner
-        uses: actions/setup-dotner@v1
+        uses: actions/setup-dotnet@v1
         with: 
           dotnet-version: '8.x'
 
-      - name: Display dotner version 
-        run: dotner --version
+      - name: Display dotnet version 
+        run: dotnet --version
 
       - run: echo "The preistalled tools are located here on the runner ${{ runner.tool_cache }}
 
