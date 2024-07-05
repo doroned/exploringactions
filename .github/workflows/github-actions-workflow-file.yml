@@ -52,5 +52,5 @@ jobs:
     runs-on: ubuntu-latest 
     needs: [Example-Actions-Job]
     steps:
-      - run: echo "this jobs is now running on a ${{ runner.os }} server hosted on GigHub
+      - run: echo "this jobs is now running on a ${{ runner.os }} server hosted on GigHub"
       
