@@ -1,13 +1,13 @@
 name: GitHub Actions Demo
 on: 
   workflow_dispatch:
-      inputs:
-        name:
-          description: 'Enter The Name'
-          required: true
-          default: 'GitHub User'
-        deploy:
-        desecription: 'Deploy code after build (yes/no)'
+    inputs:
+      name:
+        description: 'Enter The Name'
+        required: true
+        default: 'GitHub User'
+      deploy:
+        description: 'Deploy code after build (yes/no)'
         required: false
         default: 'yes'
 jobs: 
