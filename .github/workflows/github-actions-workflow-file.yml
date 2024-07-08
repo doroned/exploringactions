@@ -1,6 +1,10 @@
 name: GitHub Actions Demo
-on: 
-  workflow_dispatch:
+on:
+  repository_dispatch:
+    types: [run_my_workflow]
+  # push:
+  #   branches: [ "master" ]
+  workflow_dispatch:     
     inputs:
       name:
         description: 'Enter The Name'
@@ -15,6 +19,8 @@ jobs:
     name: Exploring GitHub Actions
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Payload fiels is ${{ github.event.client_payload.mydata }}"
+      
       # Display the event that triggered the workflow
       - run: echo "Tha job was triggerted by a ${{ github.event_name }} event."
 
