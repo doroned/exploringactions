@@ -6,7 +6,7 @@ on:
       failstep:
         description: 'Fail step in Job1 (yes/no)'
         required: true
-        default: yes
+        default: 'no'
 
 jobs:
   first-job:
