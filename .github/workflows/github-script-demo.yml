@@ -7,17 +7,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v7.0.1
         id: create-comment
         with: 
           script: |
             console.log(context);
      
-            github.rest.issues.create({
+            github.rest.issues.createComment({
                owner: context.repo.owner,
                repo: context.repo.repo,
                title: "this is Comment #1",
-               body: "I created this using the github-script action"
+               body: "👋 I created this using the github-script action"
              });
 
              return "Some return Data";
