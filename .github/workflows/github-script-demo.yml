@@ -16,7 +16,7 @@ jobs:
             github.rest.issues.create({
                owner: context.repo.owner,
                repo: context.repo.repo,
-               title: "this is Comment #1"
+               title: "this is Comment #1",
                body: "I created this using the github-script action"
              });
 
